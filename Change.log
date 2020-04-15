@@ -1,4 +1,54 @@
+[+]新增 [u]更新 [-]移除
+
+Ladon 6.2 20200327
+===========================================================================
+[+]WmiHashScan WMI HASH密码爆破(Windows)
+[+]BypassUac 绕过UAC执行,支持Win7-Win10 
+[+]EnableDotNet 一键启用.net 3.5(2008系统默认未启用)
+[u]SmbScan遇到%非数字密码停止的BUG
+[u]一些模块扫描TXT列表崩溃的BUG
+[u]LdapScan扫描check.txt只检测一个的bug
+
+
+Ladon 6.1 20200313
+===========================================================================
+[+]OnlinePC 识别Cisco、华为、3Com、中兴、三星、诺基亚、Tp-Link、Apple、爱立信等设备
+[+]SmbHashScan HASH传递SMB密码爆破
+[+]AniDnsDump 域及子域内机器获取
+[+]INI配置支持自定义程序密码爆破
+[+]命令行参数支持Cidr格式IP扫描
+[+]getHtml 获取内网网页HTML源码
+
+Ladon 6.0 2020.1.9 fixbug
+===========================================================================
+[u]修复6.0 MS17010 noping扫描显示非存活主机的问题
+[u]修复6.0 OsScan noping扫描显示非存活主机的问题
+[u]关于6.0 Win2008 R2 X64 SmbScan DLL报错(原因2008默认未启用.NET 3.5)
+[u]修复6.0 重新启用IpcScan,少量密码验证的话可以使用，因为使用SmbScan还得DLL
+
+Ladon 6.0 20191224
+详情：https://k8gege.org/p/56393.html
+===========================================================================
+[+]LdapScan AD域密码爆破:基于Ldap协议爆破Windows密码（非Ldap服务器提示不可操作）
+[+]GetCmdLine/CmdLine 获取进程命令行参数/可指定进程
+[+]GetInfo 获取渗透基础信息（当前IP、域信息、系统信息、软件信息、网络连接、补丁信息、用户等）
+[+]GetInfo2 包含GetInfo & Wmi获取信息
+[+]FtpSniffer/SnifferFtp  	Ftp密码嗅探(无需WinPcap)
+[+]HttpSniffer/SnifferHTTP 	HTTP密码嗅探(无需WinPcap)
+[+]Sniffer	仅嗅探(源地址、目标地址)，可用于发现内网存活主机、恶意木马上线地址(如CS默认一分钟才发包的netstat不一定看得到)
+[+]EnumIIS/IisWeb 获取IIS站点、路径、帐号、密码
+[+]EnumProcess/ProcessList/tasklist 枚举进程 结果(PID、Session、进程位数、进程名、用户名、路径、标题)
+
+[u]HttpDownload/wget HTTP下载命令简化也可使用wget
+[u]OsScan   扫描速度优化(某项目批量C段不再卡死)
+[u]WmiScan 	135端口关闭或RPC不可用停止爆破
+[u]SmbScan 	445端口关闭停止爆破(功能完美代替IpcScan，只是需使用DLL)
+[-]IPCScan  速度慢以及批量可能存在误报将其移除，反正SmbScan完全替代
+[u]所有功能模块参数忽略大小写
+===========================================================================
+
 Ladon 5.8 20191214
+===========================================================================
 [u]OsScan新增RDP探测Windows系统版本
 [u]OsScan新增netbios协议获取机器名
 [u]OnlinePC新增Vmware虚拟机识别
@@ -15,8 +65,10 @@ Ladon 5.8 20191210
 [u]优化加载c# dll插件
 [u]优化加载c# exe插件
 [+]判断自定义模块是否存在
+===========================================================================
 
 Ladon 5.7 20191127
+===========================================================================
 EnumMSSQL 改成 EnumMssql
 目标内网测试HttpBasicScan模块
 使用10个弱口令成功登陆以下设备或WEB站点
@@ -34,7 +86,7 @@ Tomcat
 [+]HttpBasicScan 401认证密码爆破(支持用户密码、仅密码)
 [+]TomcatScan Tomcat密码爆破/弱口令破解
 [u]WahtCMS + Apache Axis2 & Apache Flink
-
+===========================================================================
 
 5.6 1121
 OnlineIP MAC和DNS存活主机
